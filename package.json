@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "license": "MIT",
+  "devDependencies": {
+    "coffeescript": "^2.7.0"
+  },
+  "scripts": {
+    "prepare": "coffee -b -o dist/ -c ussr.user.coffee"
+  }
+}
