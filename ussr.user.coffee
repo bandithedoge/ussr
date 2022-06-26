@@ -25,3 +25,5 @@ $.getJSON "https://www.songsterr.com/api/meta/#{id}/revisions", (json) ->
         src: icon
         alt: 'Download tab'
         width: 300
+
+    return
