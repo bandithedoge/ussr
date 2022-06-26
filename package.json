@@ -1,10 +1,17 @@
 {
-  "version": "1.0.0",
-  "license": "MIT",
-  "devDependencies": {
-    "coffeescript": "^2.7.0"
-  },
-  "scripts": {
-    "prepare": "coffee -b -o dist/ -c ussr.user.coffee"
-  }
+    "version": "1.0.0",
+    "license": "MIT",
+    "devDependencies": {
+        "coffeescript": "^2.7.0",
+        "prettier": "github:helixbass/prettier#prettier-v2.1.0-dev.100-gitpkg",
+        "prettier-plugin-coffeescript": "^0.1.5"
+    },
+    "scripts": {
+        "prepare": "coffee -b -o dist/ -c ussr.user.coffee",
+        "format": "prettier . --write"
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "printWidth": 120
+    }
 }

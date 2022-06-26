@@ -2,7 +2,25 @@
 # yarn lockfile v1
 
 
-coffeescript@^2.7.0:
+coffeescript@^2.5.0, coffeescript@^2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/coffeescript/-/coffeescript-2.7.0.tgz#a43ec03be6885d6d1454850ea70b9409c391279c"
   integrity sha512-hzWp6TUE2d/jCcN67LrW1eh5b/rSDKQK6oD6VMLlggYVUUFexgTH9z3dNYihzX4RMhze5FTUsUmOXViJKFQR/A==
+
+esutils@^2.0.2:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.3.tgz#74d2eb4de0b8da1293711910d50775b9b710ef64"
+  integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
+
+prettier-plugin-coffeescript@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-coffeescript/-/prettier-plugin-coffeescript-0.1.5.tgz#6e8a002ecc952801e65fb9af14a8bc9943664450"
+  integrity sha512-xezyA/aQH2P9SyPQU2VMkcPdkq4Ekc8gI+hmnP/noJBJfPwSoFZHcwapWfEDTlOq8BxZ9bqdPHzdZf2jQ9m2Cg==
+  dependencies:
+    coffeescript "^2.5.0"
+    esutils "^2.0.2"
+    prettier "github:helixbass/prettier#prettier-v2.1.0-dev.100-gitpkg"
+
+"prettier@github:helixbass/prettier#prettier-v2.1.0-dev.100-gitpkg":
+  version "2.1.0-dev.100"
+  resolved "https://codeload.github.com/helixbass/prettier/tar.gz/1396f0979c6f6395e70384945a38888af23db6e0"

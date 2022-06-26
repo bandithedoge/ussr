@@ -9,23 +9,19 @@
 // ==/UserScript==
 `
 
-icon = "https://68.media.tumblr.com/eb4cc353565d8431e7b35d92338c5708/tumblr_mwilksxZ8y1qaqscoo1_500.png"
+icon = 'https://68.media.tumblr.com/eb4cc353565d8431e7b35d92338c5708/tumblr_mwilksxZ8y1qaqscoo1_500.png'
 url = window.location.href
 
-id = /s\d+/.exec(url)[0].slice(1)
+id = /s\d+/.exec(url)[0].slice 1
 
-$.getJSON(
-    "https://www.songsterr.com/api/meta/#{id}/revisions",
-    (json) ->
-        $("#revisions").after("<a id=download></a>")
+$.getJSON "https://www.songsterr.com/api/meta/#{id}/revisions", (json) ->
+    $('#revisions').after '<a id=download></a>'
 
-        $("#download")
-            .attr({href: json[0].source})
-            .append("<img id=coconut-doggy>")
+    $ '#download'
+        .attr href: json[0].source
+        .append '<img id=coconut-doggy>'
 
-        $("#coconut-doggy").attr({
-            src: icon
-            alt: "Download tab"
-            width: 300
-        })
-)
+    $('#coconut-doggy').attr
+        src: icon
+        alt: 'Download tab'
+        width: 300
