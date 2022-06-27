@@ -12,11 +12,13 @@ It literally just downloads the current tab in `.gp5` format and nothing else. W
 
 ## Notes
 
--   **You need to refresh (`F5`) the page after picking a song.** I'm too damn lazy to fix this.
--   It will only download the latest revision. I'm also too damn lazy to fix this.
+-   It will only download the latest revision. I'm too damn lazy to fix this.
 
 ## Building
 
 ```sh
-yarn prepare
+git clone https://github.com/bandithedoge/ussr.git
+cd ussr
+
+yarn
 ```

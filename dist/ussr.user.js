@@ -8,28 +8,27 @@
 // @author      bandithedoge
 // @require     https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
 // ==/UserScript==
-var icon, id, url;
+var icon, ussr;
 
 icon = 'https://68.media.tumblr.com/eb4cc353565d8431e7b35d92338c5708/tumblr_mwilksxZ8y1qaqscoo1_500.png';
 
-url = window.location.href;
-
-id = /s\d+/.exec(url)[0].slice(1);
-
-$.getJSON(`https://www.songsterr.com/api/meta/${id}/revisions`, function (json) {
-    $('#revisions').after('<a id=download></a>');
-    $('#download')
-        .attr({
-            href: json[0].source,
-        })
-        .append('<img id=coconut-doggy>');
-    $('#coconut-doggy')
+ussr = function () {
+    $('#logo').after('<img id=ussr>');
+    return $('#ussr')
         .attr({
             src: icon,
             alt: 'Download tab',
-            width: 300,
         })
-        .css({
-            position: 'static',
+        .click(function () {
+            var id, url;
+            url = window.location.href;
+            id = /s\d+/.exec(url)[0].slice(1);
+            return $.getJSON(`https://www.songsterr.com/api/meta/${id}/revisions`, function (json) {
+                return window.open(json[0].source);
+            });
         });
-});
+};
+
+// we have to wait half a second before placing anything
+// otherwise the ui reloads and overwrites our coconut doggy :(
+$(document).ready(setTimeout(ussr, 500));
