@@ -21,9 +21,12 @@ $.getJSON "https://www.songsterr.com/api/meta/#{id}/revisions", (json) ->
         .attr href: json[0].source
         .append '<img id=coconut-doggy>'
 
-    $('#coconut-doggy').attr
-        src: icon
-        alt: 'Download tab'
-        width: 300
+    $('#coconut-doggy')
+        .attr
+            src: icon
+            alt: 'Download tab'
+            width: 300
+        .css
+            position: "static"
 
     return
